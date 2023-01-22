@@ -60,6 +60,7 @@ void insert_node(listint_t *pos, listint_t *node, listint_t **list)
 	{
 		node->next = *list;
 		node->prev = NULL;
+		(*list)->prev = node;
 		*list = node;
 		return;
 	}
